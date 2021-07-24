@@ -1,7 +1,13 @@
-const path = require("path");
+import path from "path";
+import dotenv from "dotenv";
+import { fileURLToPath } from "url";
 
-require('dotenv').config({
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+dotenv.config({
   path: path.resolve(__dirname, "..", "..", ".env")
 });
 
-module.exports = {};
+export const nodeEnv = process.env.NODE_ENV || "development";
+export const serverPort = Number(process.env.BACKEND_PORT) || 3000;

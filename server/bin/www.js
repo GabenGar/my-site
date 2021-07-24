@@ -1,12 +1,14 @@
 #!/usr/bin/env node
 
-// Module dependencies.
-const app = require('../app');
-const debug = require('debug')('server:server');
-const http = require('http');
+import app from '../app.js';
+import debugLib from 'debug';
+import http from 'http';
 
+import { serverPort } from "#env";
+
+const debug = debugLib('server:server');
 // Get port from environment and store in Express.
-let port = normalizePort(process.env.PORT || '3000');
+let port = normalizePort(serverPort);
 app.set('port', port);
 
 // Create HTTP server.
