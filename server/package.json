@@ -6,20 +6,22 @@
   "imports": {
     "#env": "./configs/vars.js",
     "#routes/*": "./src/routes/*.js",
-    "#views/*":"./src/views/*"
+    "#views/*": "./src/views/*"
   },
   "scripts": {
-    "start": "node ./bin/www.js"
+    "start": "node ./bin/www.js",
+    "dev": "nodemon --ext js,json ./bin/www.js"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
+    "cookie-parser": "^1.4.5",
+    "debug": "^4.3.2",
     "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "morgan": "~1.9.1",
-    "pug": "2.0.0-beta11"
+    "http-errors": "^1.8.0",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2"
   },
   "devDependencies": {
-    "dotenv": "^10.0.0"
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.12"
   }
 }
