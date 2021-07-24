@@ -1,3 +1,9 @@
+# Env variables
+.env
+
+# VSCode files
+*.code-workspace
+
 # Logs
 logs
 *.log
