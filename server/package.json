@@ -6,7 +6,9 @@
   "imports": {
     "#env": "./configs/vars.js",
     "#routes/*": "./src/routes/*.js",
-    "#views/*": "./src/views/*"
+    "#views/*": "./src/views/*",
+    "#lib/*": ["./src/lib/*"],
+    "#classes/*": ["./src/lib/classes/*"]
   },
   "scripts": {
     "start": "node ./bin/www.js",

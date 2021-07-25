@@ -4,7 +4,9 @@
     "paths": {
       "#env": ["./configs/vars.js"],
       "#routes/*": ["./src/routes/*"],
-      "#views/*": ["./src/views/*"]
+      "#views/*": ["./src/views/*"],
+      "#lib/*": ["./src/lib/*"],
+      "#classes/*": ["./src/lib/classes/*"],
     },
     "checkJs": false,
     "resolveJsonModule": true,
