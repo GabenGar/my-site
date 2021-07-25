@@ -20,7 +20,7 @@ server.addListener('error', onError);
 server.addListener('listening', onListening);
 
 /**
- * Normalize a port into a number, string, or false.
+ * Normalize a port into a `number`, `string`, or `false`.
  * @param {number | string} val
  */
 function normalizePort(val) {
