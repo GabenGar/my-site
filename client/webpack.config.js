@@ -1,6 +1,7 @@
 const path = require("path");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+// const CopyWebpackPlugin = require("copy-webpack-plugin");
 
+const { outputPath } = require("#configs/vars.js");
 const { buildHTMLWebpackPlugins } = require("#configs/build-templates.js");
 
 const projectPath = path.resolve(__dirname, "src");
@@ -37,6 +38,15 @@ const webpackConfig = {
   ],
   resolve: {
     extensions: [".js"],
+  },
+  experiments: {
+    outputModule: true,
+  },
+  output: {
+    path: outputPath,
+    publicPath: "/",
+    module: true,
+    clean: true,
   }
 }
 

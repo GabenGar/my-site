@@ -2,7 +2,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 const { merge } = require("webpack-merge");
 
-const { outputPath } = require("#configs/vars.js");
 const baseConfig = require("./webpack.config");
 
 /**
@@ -32,8 +31,8 @@ const webpackConfigDev = {
   devServer: devServer,
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "public/bundle/css/[name].css",
-      chunkFilename: "public/bundle/css/[id].chunk.css"
+      filename: "public/bundle/styles/[name].css",
+      chunkFilename: "public/bundle/styles/[id].chunk.css"
     }),    
     // new FaviconsWebpackPlugin({
     //   logo:"./src/assets/logo/kemono-logo.svg",
@@ -67,11 +66,8 @@ const webpackConfigDev = {
     ]
   },
   output: {
-    path: outputPath,
     filename: "public/bundle/scripts/[name].bundle.js",
     assetModuleFilename: "public/bundle/assets/[name][ext][query]",
-    publicPath: "/",
-    clean: true,
   }
 }
 
