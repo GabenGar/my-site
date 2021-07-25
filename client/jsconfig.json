@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "#configs/*": ["./configs/*"]
+    },
+    "module": "commonJS",
+    "target": "es2015",
+    "moduleResolution": "node",
+    "lib": ["es5"]
+  },
+  "exclude": ["node_modules", "dist", "dev", "src"]
+}

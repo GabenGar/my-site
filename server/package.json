@@ -1,18 +1,17 @@
 {
   "name": "server",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "private": true,
   "imports": {
     "#env": "./configs/vars.js",
     "#routes/*": "./src/routes/*.js",
-    "#views/*": "./src/views/*",
     "#lib/*": ["./src/lib/*"],
     "#classes/*": ["./src/lib/classes/*"]
   },
   "scripts": {
     "start": "node ./bin/www.js",
-    "dev": "nodemon --ext js,json ./bin/www.js"
+    "dev": "nodemon --ext js,json --ignore dist ./bin/www.js"
   },
   "dependencies": {
     "cookie-parser": "^1.4.5",

@@ -5,7 +5,7 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import { fileURLToPath, URL } from 'url';
 
-import { siteOrigin } from "#env";
+import { siteOrigin, outputPath } from "#env";
 import indexRouter from '#routes/index';
 import usersRouter from '#routes/users';
 
@@ -18,14 +18,14 @@ const app = express();
 app.locals.siteOrigin = siteOrigin;
 
 // view engine setup
-app.set('views', path.join(projectPath, 'views'));
+app.set('views', path.join(outputPath, 'views'));
 app.set('view engine', 'pug');
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(projectPath, "..", 'public')));
+app.use(express.static(path.join(outputPath, "public")));
 
 // canonical url middleware
 app.use((req, res, next) => {
