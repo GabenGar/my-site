@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "description": "The repo for my site",
   "private": true,
-  "scripts": {
-    "dev": "cd server && npm run dev"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GabenGar/my-site.git"
@@ -16,5 +13,13 @@
   "bugs": {
     "url": "https://github.com/GabenGar/my-site/issues"
   },
-  "homepage": "https://github.com/GabenGar/my-site#readme"
+  "homepage": "https://github.com/GabenGar/my-site#readme",
+  "scripts": {
+    "dev:server": "cd server && npm run dev",
+    "dev": "concurrently --kill-others 'npm:dev:server'"
+  },
+  
+  "dependencies": {
+    "concurrently": "^6.2.0"
+  }
 }
