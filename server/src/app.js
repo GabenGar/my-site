@@ -25,7 +25,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(outputPath, "public")));
+app.use("/public", express.static(path.join(outputPath, "public")));
 
 // canonical url middleware
 app.use((req, res, next) => {
