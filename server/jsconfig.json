@@ -10,7 +10,8 @@
     "resolveJsonModule": true,
     "moduleResolution": "node",
     "target": "es2020",
-    "module": "es2015"
+    "module": "es2015",
+    "lib": ["es6"]
   },
   "exclude": [
     "dist",
