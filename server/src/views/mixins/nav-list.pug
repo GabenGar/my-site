@@ -1,0 +1,8 @@
+mixin navList()
+  nav.nav-list
+    ul.nav-list__items
+      block
+
+mixin navListItem(item)
+  li.nav-list__item
+    a.nav-list__link(href=item.link) #{item.title}

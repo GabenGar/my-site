@@ -11,3 +11,4 @@ dotenv.config({
 
 export const nodeEnv = process.env.NODE_ENV || "development";
 export const serverPort = Number(process.env.BACKEND_PORT) || 3000;
+export const siteOrigin = process.env.WEBSITE_ORIGIN || "http://localhost:3000";
