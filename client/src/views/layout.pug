@@ -1,4 +1,4 @@
-include mixins.pug
+include /mixins/_index.pug
 doctype html
 html(
   lang="en" 
@@ -57,14 +57,16 @@ html(
       title #{title}
   body
     header.global-header
-      block globalHeader
-        +navList()
-          +navListItem({ link: "/", title: "Home" })
-          +navListItem({ link: "/blog", title: "Blog" })
-          +navListItem({ link: "/about", title: "About" })
+      div.global-header__icon
+        +svgIcon("site-logo")
+        a(href="/") Home
+
+      +navList()
+        +navListItem({ link: "/blog", title: "Blog" })
+        +navListItem({ link: "/about", title: "About" })
       
     main.main-content
       block content
 
     footer.global-footer
-      block globalFooter
+      p Icons made by #[a(href="https://www.freepik.com" title="Freepik") Freepik] from #[a(href="https://www.flaticon.com/" title="Flaticon") www.flaticon.com]

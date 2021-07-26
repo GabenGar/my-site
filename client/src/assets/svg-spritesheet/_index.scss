@@ -1,0 +1,11 @@
+.svg-icon {
+  &-site-logo {
+    &__group {
+      fill: var(--colour1-primary);
+      background-color: var(--colour0-primary);
+    }
+    
+    &__path {}
+    &__cirle {}
+  }
+}

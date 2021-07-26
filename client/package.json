@@ -10,6 +10,7 @@
   "license": "MIT",
   "imports": {
     "#configs/*": "./configs/*",
+    "#assets/*": "./src/assets/*",
     "#scripts/*": "./src/scripts/*",
     "#styles/*": "./src/styles/*",
     "#views/*": "./src/views/*"

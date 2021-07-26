@@ -2,6 +2,10 @@
   "name": "my-site",
   "version": "0.0.1",
   "description": "The repo for my site",
+  "engines": {
+    "node": ">=12.19.0"
+  },
+  "engineStrict": true,
   "private": true,
   "repository": {
     "type": "git",
