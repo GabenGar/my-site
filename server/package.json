@@ -6,8 +6,8 @@
   "imports": {
     "#env": "./configs/vars.js",
     "#routes/*": "./src/routes/*.js",
-    "#lib/*": ["./src/lib/*"],
-    "#classes/*": ["./src/lib/classes/*"]
+    "#lib/*": ["./src/lib/*.js"],
+    "#classes/*": ["./src/lib/classes/*.js"]
   },
   "scripts": {
     "start": "node ./bin/www.js",

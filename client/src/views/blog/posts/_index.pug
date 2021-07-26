@@ -1,0 +1,22 @@
+extends /layout.pug
+
+block pageTitle
+  title #{props.title}
+
+block content
+  section
+    header
+      h1 #{props.title}
+
+    nav
+      ul
+        if props.articles
+          for slug of props.articles
+            -
+              const link = `/blog/posts/${slug}`;
+              const title = props.findArticle(slug).title
+            li
+              a(href= link) #{title}
+
+        else
+          p No articles were found.

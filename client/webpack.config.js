@@ -2,9 +2,10 @@ const path = require("path");
 // const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const { outputPath } = require("#configs/vars.js");
-const { buildHTMLWebpackPlugins } = require("#configs/build-templates.js");
+const { buildHTMLWebpackPlugins, buildHTMLWebpackPluginsRecursive} = require("#configs/build-templates.js");
 
 const projectPath = path.resolve(__dirname, "src");
+
 const viewsPath = path.join(projectPath, "views");
 const mixinsPath = path.join(viewsPath, "mixins");
 const pluginOptions = {
@@ -16,6 +17,7 @@ const pluginOptions = {
 };
 const viewPlugins = buildHTMLWebpackPlugins(viewsPath, projectPath, pluginOptions);
 const mixinPlugins = buildHTMLWebpackPlugins(mixinsPath, projectPath, pluginOptions);
+const viewsPlugins = buildHTMLWebpackPluginsRecursive(viewsPath, pluginOptions);
 
 /**
  * @type import("webpack").Configuration
@@ -25,8 +27,9 @@ const webpackConfig = {
     main: path.join(projectPath, "scripts", "main.js")
   },
   plugins: [
-    ...viewPlugins,
-    ...mixinPlugins,
+    // ...viewPlugins,
+    // ...mixinPlugins,
+    ...viewsPlugins,
     // new CopyWebpackPlugin({
     //   patterns: [
     //     {

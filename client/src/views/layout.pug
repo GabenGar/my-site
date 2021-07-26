@@ -53,12 +53,14 @@ html(
     
     block scripts
 
-    title #{title}
+    block pageTitle
+      title #{title}
   body
     header.global-header
       block globalHeader
         +navList()
           +navListItem({ link: "/", title: "Home" })
+          +navListItem({ link: "/blog", title: "Blog" })
           +navListItem({ link: "/about", title: "About" })
       
     main.main-content

@@ -1,0 +1,14 @@
+extends /layout.pug
+
+block pageTitle
+  title #{props.title}
+
+block content
+  section
+    header
+      h1 Welcome to #{props.title}
+
+    nav 
+      ul
+        li
+          a(href="/blog/posts") Posts 

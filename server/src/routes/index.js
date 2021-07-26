@@ -1,5 +1,5 @@
 import express from 'express';
-import { PageProps } from '#classes/props.js';
+import { PageProps } from '#classes/props';
 const router = express.Router();
 
 // GET home page.
